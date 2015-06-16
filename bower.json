@@ -1,0 +1,15 @@
+{
+  "name": "Confion",
+  "private": true,
+  "version": "0.0.1",
+  "description": "An app to display conference sessions.",
+  "repository": "https://github.com/webplatformz/confion.git",
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-loader": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "foundation": "~5.5.2",
+    "angular-local-storage": "~0.2.2"
+  }
+}

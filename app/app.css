@@ -1,0 +1,40 @@
+.off-canvas-wrap {
+    height: 100%;
+}
+
+div .inner-wrap {
+    height: 100%;
+}
+
+.session-box {
+}
+
+.session-box-content {
+    border: 2px solid white;
+    min-height: 100px;
+
+}
+
+.main-section {
+    overflow: scroll;
+}
+
+.session-box a {
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.session-box div {
+    transition: 0.5s ease;
+}
+
+.session-box:hover div {
+    box-shadow: 0 0 0 2px #000000;
+    transition: 0.5s ease;
+}
+
+.session-header {
+    margin-top: 5px;
+    font-weight: bold;
+}
