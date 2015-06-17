@@ -1,1 +1,19 @@
-<p>halloo</p>
+<h1>Suche</h1>
+<form ng-submit="vm.search()" novalidate class="simple-form">
+    <p>From: <input type="text" ng-model="vm.searchCriteria.from"/></p>
+    <p>To: <input type="text" ng-model="vm.searchCriteria.to"/></p>
+    <p>To: <input type="text" ng-model="vm.searchCriteria.limit"/></p>
+    <input type="submit" value="suchen" />
+</form>
+
+<div ng-show="vm.spinner">
+    SPINNER
+</div>
+
+<div ng-show="vm.connections">
+    <h1>Resultat</h1>
+    <p>From: {{vm.connections.from.name}} To: {{vm.connections.to.name}}</p>
+    <div ng-repeat="connection in vm.connections.connections ">
+        <p>Abfahrt: {{connection.from.departure}} - Ankunft: {{connection.to.arrival}}</p>
+    </div>
+</div>

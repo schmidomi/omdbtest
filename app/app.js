@@ -2,9 +2,8 @@
 
 angular
     .module('app', [
-        'app.core',
-        'app.overview'
-
+        'ngResource',
+        'ngRoute'
     ])
 
     .config(['$routeProvider', function($routeProvider) {
