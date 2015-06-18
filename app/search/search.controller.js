@@ -4,17 +4,17 @@ angular
     .module('app')
 
     .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/overview', {
-            templateUrl: 'overview/overview.html',
-            controller: 'OverviewController',
+        $routeProvider.when('/search', {
+            templateUrl: 'search/search.html',
+            controller: 'SearchController',
             controllerAs: 'vm'
         });
     }])
 
-    .controller('OverviewController', OverviewController);
+    .controller('SearchController', SearchController);
 
-    OverviewController.$inject = ['connections'];
-    function OverviewController(connections) {
+    SearchController.$inject = ['connections'];
+    function SearchController(connections) {
         var vm = this;
 
         vm.searchCriteria = {

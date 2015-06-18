@@ -1,0 +1,62 @@
+<div class="row" style="margin-top:20px">
+    <div ng-show="vm.spinner">
+        <div class="row" style="margin-top: 50px">
+            <div class="small-2 small-centered columns">
+                <div class="fa fa-spinner fa-spin fa-5x"></div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-show="!vm.spinner">
+        <form ng-submit="vm.search()" novalidate class="simple-form">
+            <div class="row">
+                <div class="small-2 columns">
+                    <label for="from-label">From</label>
+                </div>
+                <div class="small-4 columns end">
+                    <input type="text" id="from-label" placeholder="Inline Text Input" ng-model="vm.searchCriteria.from">
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-2 columns">
+                    <label for="to-label">To</label>
+                </div>
+                <div class="small-4 columns end">
+                    <input type="text" id="to-label" placeholder="Inline Text Input" ng-model="vm.searchCriteria.to">
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-2 columns">
+                    <label for="limit-label">Limit</label>
+                </div>
+                <div class="small-4 columns end">
+                    <input type="text" id="limit-label" placeholder="Inline Text Input" ng-model="vm.searchCriteria.limit">
+                </div>
+            </div>
+            <div class="row">
+                <div class="columns end"><input type="submit" value="suchen" class="button"/></div>
+            </div>
+        </form>
+
+
+
+        <div ng-show="vm.connections">
+            <div style="margin-top: 10px">
+                <div class="row">Von: {{vm.connections.from.name}}, Nach: {{vm.connections.to.name}}</div>
+            </b>
+
+            <div class="row" style="margin-top: 10px">
+                <div class="small-5 columns">Abfahrt</div>
+                <div class="small-5 columns">Ankunft</div>
+                <div class="small-2 columns">Stopps</div>
+            </div>
+            <div ng-repeat="connection in vm.connections.connections ">
+                <div class="row">
+                    <div class="small-5 columns">{{connection.from.departure | date:"dd.MM.yyyy HH:mm"}} </div>
+                    <div class="small-5 columns">{{connection.to.arrival | date:"dd.MM.yyyy HH:mm"}}</div>
+                    <div class="small-2 columns">{{connection.transfers}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

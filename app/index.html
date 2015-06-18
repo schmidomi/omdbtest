@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" href="bower_components/foundation/css/foundation.min.css">
   <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script src="bower_components/foundation/js/vendor/modernizr.js"></script>
 </head>
 <body>
@@ -22,14 +23,14 @@
         </section>
 
         <section class="middle tab-bar-section">
-          <h1 class="title">Foundation</h1>
+          <h1 class="title">Fahrplan</h1>
         </section>
       </nav>
 
       <aside class="left-off-canvas-menu">
         <ul class="off-canvas-list">
-          <li><label>Foundation</label></li>
-          <li><a href="#/overview">Overview</a></li>
+          <li><label>Fahrplan</label></li>
+          <li><a href="#/search">Suche</a></li>
         </ul>
       </aside>
 
@@ -50,14 +51,23 @@
   <script src="bower_components/angular-resource/angular-resource.js"></script>
 
   <script src="app.js"></script>
-  <script src="overview/connections.factory.js"></script>
-  <script src="overview/overview.controller.js"></script>
+  <script src="search/connections.factory.js"></script>
+  <script src="search/search.controller.js"></script>
 
   <script src="bower_components/foundation/js/vendor/jquery.js"></script>
   <script src="bower_components/foundation/js/foundation.min.js"></script>
 
   <script>
-    $(document).foundation();
+    $(document).foundation({
+      offcanvas : {
+        // Sets method in which offcanvas opens.
+        // [ move | overlap_single | overlap ]
+        open_method: 'move',
+        // Should the menu close when a menu link is clicked?
+        // [ true | false ]
+        close_on_click : true
+      }
+    });
   </script>
 </body>
 </html>
